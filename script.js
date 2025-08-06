@@ -313,7 +313,6 @@ function draw() {
   else if (screen == "food") {
     image(outsideImg, 0, 0, 800, 400);
 
-    
     if (gameState == 1) {
       textSize(30);
       text("Move the duck with the\nleft and right arrow keys \nto catch the falling bread.", width/2 + 15, 30);
@@ -341,7 +340,7 @@ function draw() {
 
       //Move catcher
       if (kb.pressing("left")) {
-        if (duck.image == duckImg) {
+        if (duckStage == "duck") {
           catcher.image = duckImg;
         }
         else {
@@ -350,7 +349,7 @@ function draw() {
         catcher.vel.x = -4;
       }
       else if (kb.pressing("right")) {
-        if (duck.image == duckImg) {
+        if (duckStage == "duck") {
           catcher.image = duckImgFlipped;
         }
         else {
