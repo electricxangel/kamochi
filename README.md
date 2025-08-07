@@ -1,4 +1,4 @@
-## Kamochi
+## Kamotchi
 - the name is a spin on tamagotchi (a cross between egg and friend in japanese); replacing tamago (egg) with kamo (duck)!
 - raise your pet from an egg to a full-grown duck
 - keep your duck's food, happiness and sleep stats above zero to avoid a game over
