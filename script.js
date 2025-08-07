@@ -482,7 +482,7 @@ function draw() {
       }
 
       if (ghost.mouse.presses()) {
-        ghostNoise.play();
+        //ghostNoise.play();
         score++;
         ghostPick = Math.floor(Math.random() * 2);
         if (ghostPick == 0) {
