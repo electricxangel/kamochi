@@ -168,7 +168,7 @@ function draw() {
   if (screen == "home") {
     
     //Lower stats randomly
-    lowerStat = Math.floor(Math.random() * 100);
+    lowerStat = Math.floor(Math.random() * 150);
     if (lowerStat == 1) {
       statToLower = Math.floor(Math.random() * 3);
       if (statToLower == 0) {
