@@ -98,11 +98,6 @@ function setup() {
   bowl = new Sprite(bowlImg, width/4+25, 350, 100, 61);
   bowl.collider = "k";
 
-  //Create catcher
-  catcher = new Sprite(1000,1000,104,95);
-  catcher.image = duckImg;
-  catcher.collider = "k";
-
   //Create bed
   bed = new Sprite(bedImg, 75, 350, 128, 75)
   bed.collider = "k";
@@ -136,6 +131,10 @@ function setup() {
   ghost.rotationlock = true;
   ghost.collider = "k";
 
+  //Create catcher
+  catcher = new Sprite(1000,1000,104,95);
+  catcher.image = duckImg;
+  catcher.collider = "k";
   
 
   setInterval(timeIt, 1000)
@@ -278,8 +277,16 @@ function draw() {
     
     if (bowl.mouse.presses()) {
       leaveHome();
-      catcher.pos = {x: width/4, y: 350}
-      catcher.image = duck.image;
+      catcher.pos = {x: width/4, y: 350};
+      if (duckStage == "duck") {
+        catcher.image = duckImg;
+      }
+      else if (duckStage == "duckling") {
+        catcher.image = ducklingImg;
+      }
+      else {
+        catcher.image = eggImg;
+      }
       resetBread();
       gameState = 1;
       screen = "food";
